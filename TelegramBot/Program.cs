@@ -18,8 +18,7 @@ namespace TelegramBot
 
             botClient.StartReceiving(Update, Error);
 
-
-            Console.WriteLine("Here we are");
+            Console.WriteLine("@tgmNet_bot");
             Console.ReadLine();
         }
 
