@@ -62,18 +62,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buttons\Buttons.cs" />
+    <Compile Include="Data\Buttons\Buttons.cs" />
     <Compile Include="Commands\TextComands.cs" />
     <Compile Include="Commands\CmdHandler.cs" />
     <Compile Include="Commands\SendMessage.cs" />
+    <Compile Include="Data\Intefaces\IApiModel.cs" />
+    <Compile Include="Data\Intefaces\IReguestResposeApi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Other\SimpleMethods.cs" />
-    <Compile Include="Weather\CityDirectory.cs" />
-    <Compile Include="Weather\GetApiWeather.cs" />
-    <Compile Include="Weather\JsonConverter.cs" />
-    <Compile Include="Weather\WeatherModels\TempretureInfoModel.cs" />
-    <Compile Include="Weather\WeatherModels\WeatherModel.cs" />
+    <Compile Include="Data\Weather\CityDirectory.cs" />
+    <Compile Include="Data\Weather\GetApiWeather.cs" />
+    <Compile Include="Data\Weather\WeatherModels\TempretureInfoModel.cs" />
+    <Compile Include="Data\Weather\WeatherModels\WeatherModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig">
