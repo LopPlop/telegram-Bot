@@ -18,7 +18,7 @@ namespace TelegramBot
     {
         static void Main(string[] args)
         {
-            var botClient = new TelegramBotClient("5394331505:AAGqYz8oWrLQKr9MN0f073mhnGnKupUVkco") { Timeout = TimeSpan.FromSeconds(10)};
+            var botClient = new TelegramBotClient("5394331505:AAGqYz8oWrLQKr9MN0f073mhnGnKupUVkco") { Timeout = TimeSpan.FromSeconds(10) };
 
             botClient.StartReceiving(Update, Error);
 
@@ -45,8 +45,7 @@ namespace TelegramBot
                 }
                 if (message.Text.ToLower().Contains("/tempreture"))
                 {
-                    await botClient.SendTextMessageAsync(message.Chat.Id, "Выберите город:", replyMarkup: Buttons.Buttons.GetButtons());
-
+                    /*await botClient.SendTextMessageAsync(message.Chat.Id, "Выберите город:", replyMarkup: Buttons.Buttons.GetButtons());*/
 
                     WeatherModel weather = JsonConverter.JsonDeserialization(GetApiWeather.HttpRequestWeatherByCity("Novosibirsk"));
                     await botClient.SendTextMessageAsync(message.Chat.Id, $"В городе {weather.Name} сейчас {weather.Main.Temp} °C");

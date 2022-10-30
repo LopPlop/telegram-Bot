@@ -17,14 +17,14 @@ namespace TelegramBot.Buttons
                 // first row
                 new []
                 {
-                    InlineKeyboardButton.WithCallbackData(text: "Новосибирск", callbackData: "11"),
-                    InlineKeyboardButton.WithCallbackData(text: "Талдыкорган", callbackData: "12"),
+                    InlineKeyboardButton.WithCallbackData(text: "Novosibirsk", callbackData: "Novosibirsk"),
+                    InlineKeyboardButton.WithCallbackData(text: "Taldykorgan", callbackData: "Taldykorgan"),
                 },
                 // second row
                 new []
                 {
-                    InlineKeyboardButton.WithCallbackData(text: "Алмата", callbackData: "21"),
-                    InlineKeyboardButton.WithCallbackData(text: "Москва", callbackData: "22"),
+                    InlineKeyboardButton.WithCallbackData(text: "Almaty", callbackData: "Almaty"),
+                    InlineKeyboardButton.WithCallbackData(text: "Moscow", callbackData: "Moscow"),
                 },
             });
             return inlineKeyboard;
