@@ -17,3 +17,4 @@ C:\Users\Bruh\source\repos\TelegramBot\TelegramBot\obj\Debug\TelegramBot.csproj.
 C:\Users\Bruh\source\repos\TelegramBot\TelegramBot\obj\Debug\TelegramBot.csproj.CopyComplete
 C:\Users\Bruh\source\repos\TelegramBot\TelegramBot\obj\Debug\TelegramBot.exe
 C:\Users\Bruh\source\repos\TelegramBot\TelegramBot\obj\Debug\TelegramBot.pdb
+C:\Users\Bruh\source\repos\TelegramBot\TelegramBot\bin\Debug\Json.Net.dll

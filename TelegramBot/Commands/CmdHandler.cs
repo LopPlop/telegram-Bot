@@ -19,9 +19,8 @@ namespace TelegramBot.Commands
         {
             CmdGetHandler(botClient, update);
             CmdWriteHandler(botClient, update);
+            CmdWriteGekchaHandler(botClient, update);
         }
-
-
 
         // Обрабатывает все команды начинающиеся с /get
         private async static void CmdGetHandler(ITelegramBotClient botClient, Update update)
@@ -72,7 +71,6 @@ namespace TelegramBot.Commands
                 await botClient.SendTextMessageAsync(update.Message.Chat.Id, "https://github.com/LopPlop");
                 return;
             }
-
         }
 
 
@@ -81,11 +79,25 @@ namespace TelegramBot.Commands
         {
             string str = update.Message.Text;
 
-            if (str.ToLower().Contains("/write"))
+            if (str.ToLower().Contains("/write "))
             {
                 string tmp = SimpleMethods.GetMessageAfterSpace(str);
                 await botClient.SendTextMessageAsync(update.Message.Chat.Id, "Сообщение отправлено, автор обязательно свяжется с вами!");
                 await botClient.SendTextMessageAsync(1885288357, $"{update.Message.Chat.Username} написал тебе: {tmp}");
+                return;
+            }
+        }
+
+        // Скрытый функционал
+        private static async void CmdWriteGekchaHandler(ITelegramBotClient botClient, Update update)
+        {
+            string str = update.Message.Text;
+
+            if (str.ToLower().Contains("/gekcha "))
+            {
+                string tmp = SimpleMethods.GetMessageAfterSpace(str);
+                await botClient.SendTextMessageAsync(update.Message.Chat.Id, "Вы отправили сообщение польхователю Gekcha");
+                await botClient.SendTextMessageAsync(2046105074, $"{update.Message.Chat.Username} написал тебе: {tmp}");
                 return;
             }
         }
