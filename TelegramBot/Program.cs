@@ -48,25 +48,6 @@ namespace TelegramBot
                     await botClient.SendTextMessageAsync(message.Chat.Id, $"{message.Chat.Id}");
                     return;
                 }
-                if (message.Text.ToLower().Contains("/tempreture"))
-                {
-                    await botClient.SendTextMessageAsync(message.Chat.Id, "Выберите город:", replyMarkup: Buttons.Buttons.GetButtons());
-
-
-
-                    if (message.Text.ToLower().Contains("Novosibirsk"))
-                    {
-
-                    }
-
-
-                    GetApiWeather getApiWeather = new GetApiWeather();
-                    WeatherModel weather = getApiWeather.HttpRequestResponceByStr("Novosibirsk");
-
-
-                    await botClient.SendTextMessageAsync(message.Chat.Id, $"В городе {weather.Name} сейчас {weather.Main.Temp} °C");
-                    return;
-                }
                 CmdHandler.CmdHandle(botClient, update);
             }
         }
