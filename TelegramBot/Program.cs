@@ -12,7 +12,7 @@ using TelegramBot.Weather;
 using TelegramBot.Weather.WeatherModels;
 using TelegramBot.Buttons;
 using System.Net;
-
+using TelegramBot.Parser.BitcoinParser;
 
 namespace TelegramBot
 {
@@ -20,6 +20,10 @@ namespace TelegramBot
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(BitcoinParser.GetBitcoinPrice());
+
+
+
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 

@@ -68,6 +68,7 @@
     <Compile Include="Commands\SendMessage.cs" />
     <Compile Include="Data\Intefaces\IApiModel.cs" />
     <Compile Include="Data\Intefaces\IReguestResposeApi.cs" />
+    <Compile Include="Parser\BitcoinParser\BitcoinParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Other\SimpleMethods.cs" />
